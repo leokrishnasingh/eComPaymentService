@@ -6,6 +6,7 @@ import com.krishna.ecomproductservice.models.Product;
 import com.krishna.ecomproductservice.services.IProductService;
 import jakarta.ws.rs.PUT;
 import jakarta.ws.rs.Path;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -16,7 +17,7 @@ public class ProductController {
 
     private final IProductService productService;
 
-    public ProductController(IProductService productService) {
+    public ProductController(@Qualifier("fakeStoreDB") IProductService productService) {
         this.productService = productService;
     }
 

@@ -12,8 +12,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
-@Service
-@Primary
+@Service("mySQLProductDB")
 public class ProductService implements IProductService {
 
     private IProductRepository productRepository;
